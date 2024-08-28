@@ -1,0 +1,29 @@
+<div>
+  <div><h1>Type Comparator</h1></div>
+  <div>
+    <p>
+      Note:-This project compares entered string and displayed string and gves
+      output
+    </p>
+  </div>
+  <div>
+    <p>
+      <span
+        [class]="compare(letter, enteredText[i])"
+        *ngFor="let letter of randomText.split(''); let i = index"
+        >{{ letter }}</span
+      >
+    </p>
+  </div>
+  <div>
+    <input
+      type="text"
+      name="enter text"
+      id="id"
+      class="input"
+      placeholder="Enter above text"
+      (input)="onInput($event)"
+    />
+  </div>
+  <div *ngIf="enteredText === randomText">Sucesss!!!</div>
+</div>
